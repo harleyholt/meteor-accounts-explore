@@ -1,0 +1,21 @@
+<template name="signin">
+  <form name="signin" class="form-signin" novalidate>
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <div class="form-group {{#if errors.email}}has-error{{/if}}">
+      <label for="signinEmail" class="sr-only">Email address</label>
+      <input type="email" id="signinEmail" name="email" class="form-control" placeholder="Email address" required autocomplete="on" />
+    </div>
+    <div class="form-group {{#if errors.password}}has-error{{/if}}">
+      <label for="signinPassword" class="sr-only">Password</label>
+      <input type="password" id="signinPassword" name="password" class="form-control" placeholder="Password" required autocomplete="on" />
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3">
+        <button type="submit" class="btn btn-default form-control" disabled={{loggingIn}}>Sign In</button>
+      </div>
+      {{#if loginError}}
+      <span class="col-sm-8 alert alert-danger" role="alert">{{loginError.friendlyReason}}</span>
+      {{/if}}
+    </div>
+  </form>
+</template>

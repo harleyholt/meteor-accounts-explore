@@ -1,0 +1,18 @@
+<template name="authenticatedLayout">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Authenticated</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/authenticated">My Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><button class="btn logout">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>

@@ -1,0 +1,19 @@
+<head>
+  <title>Magic Login Testing Site</title>
+</head>
+
+<template name="defaultLayout">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Unauthenticated</a>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {{> yield}}
+  </div>
+</template>
